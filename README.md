@@ -1,0 +1,138 @@
+[index (1).html](https://github.com/user-attachments/files/34201810/index.1.html)[Uploading index (1).<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORSAKEN ARCHIVES — Survivor Records</title>
+<style>
+:root{--green:#39d353;--dim:#8ba994;--bg:#070b09;--panel:#101813;--line:#294332;--red:#b94b4b}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#14251a 0,#070b09 55%);color:#dce8df;font:15px Verdana,Arial,sans-serif;min-height:100vh}
+a{color:var(--green)}
+header{border-bottom:1px solid var(--line);background:#050806eF;padding:22px 5%;box-shadow:0 4px 22px #000}
+.top{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font:bold 26px 'Courier New',monospace;letter-spacing:2px;color:var(--green);text-shadow:0 0 12px #39d35355}
+.tag{font:11px 'Courier New',monospace;color:var(--dim);letter-spacing:1px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+nav button,.btn{background:#101b13;border:1px solid #31533a;color:#bfe8c8;padding:9px 13px;cursor:pointer;font:12px 'Courier New',monospace}
+nav button:hover,.btn:hover{background:#1b3020;border-color:var(--green);color:white}
+main{max-width:1050px;margin:28px auto;padding:0 18px}
+.hero{border:1px solid var(--line);background:linear-gradient(120deg,#14251b,#0b100d);padding:28px;position:relative;overflow:hidden}
+.hero:after{content:"ARCHIVE // 2008";position:absolute;right:20px;bottom:14px;color:#42634a;font:11px 'Courier New';letter-spacing:2px}
+h1{font: bold clamp(25px,5vw,42px) 'Courier New',monospace;color:var(--green);margin:0 0 10px}
+h2{font:20px 'Courier New',monospace;color:var(--green);border-bottom:1px solid var(--line);padding-bottom:9px}
+.hero p{max-width:650px;color:#b8c9bc;line-height:1.7}
+.status{display:inline-block;color:#071009;background:var(--green);font:bold 10px 'Courier New';padding:5px 8px;margin-bottom:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--line);padding:17px;min-height:145px}
+.card h3{margin:0 0 9px;color:#d7f4dd;font: bold 16px 'Courier New'}
+.card p{color:#9fb3a4;font-size:13px;line-height:1.5}
+.card button{margin-top:8px}
+.panel{background:#0c120e;border:1px solid var(--line);padding:20px;margin-top:20px}
+.meta{font:11px 'Courier New';color:var(--dim);letter-spacing:1px}
+.story{font-size:15px;line-height:1.9;color:#d5dfd7;max-width:780px}
+.story p{margin:0 0 15px}
+.story .dialogue{color:#bce9c4}
+.story .warning{border-left:3px solid var(--red);padding:10px 14px;background:#241313;color:#e7b7b7;font:13px 'Courier New'}
+.hidden{display:none}
+footer{max-width:1050px;margin:35px auto 0;padding:20px 18px 35px;color:#688071;font:11px 'Courier New';border-top:1px solid var(--line)}
+#secret{color:#8a9b8e}
+input{background:#070b09;border:1px solid var(--line);padding:10px;color:#dce8df;width:min(100%,280px)}
+@media(max-width:600px){.hero{padding:20px}.brand{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <div><div class="brand">▣ FORSAKEN ARCHIVES</div><div class="tag">SURVIVOR RECORDS // EST. 2008</div></div>
+  <div class="tag">SERVER STATUS: <span style="color:#39d353">ONLINE</span></div>
+ </div>
+ <nav>
+  <button onclick="showSection('home')">INÍCIO</button>
+  <button onclick="showSection('stories')">HISTÓRIAS</button>
+  <button onclick="showSection('files')">ARQUIVOS</button>
+  <button onclick="showSection('about')">SOBRE</button>
+ </nav>
+</header>
+<main>
+<section id="home">
+ <div class="hero">
+  <span class="status">ACESSO AUTORIZADO</span>
+  <h1>THE TRUTH IS BURIED<br>IN THE SERVER.</h1>
+  <p>Um arquivo de histórias, registros e mistérios encontrados nos cantos esquecidos do universo Forsaken. Algumas páginas ainda não foram recuperadas.</p>
+  <button class="btn" onclick="showSection('stories')">ABRIR ARQUIVO →</button>
+ </div>
+ <h2>▸ ÚLTIMOS REGISTROS</h2>
+ <div class="grid">
+  <article class="card"><div class="meta">REGISTRO 001 // HISTÓRIA</div><h3>O Último Servidor</h3><p>Uma conexão desconhecida aparece às 03:17 da madrugada.</p><button class="btn" onclick="openStory('last')">LER REGISTRO</button></article>
+  <article class="card"><div class="meta">REGISTRO 002 // VHS</div><h3>A Fita VHS</h3><p>Uma gravação antiga contém uma mensagem que não deveria existir.</p><button class="btn" onclick="openStory('tape')">EM BREVE</button></article>
+  <article class="card"><div class="meta">REGISTRO 003 // CLASSIFICADO</div><h3>O Retorno</h3><p>O nome de Dusekkar aparece em um relatório apagado.</p><button class="btn" onclick="openStory('return')">EM BREVE</button></article>
+ </div>
+ <div class="panel"><div class="meta">MENSAGEM DO ARQUIVISTA</div><p>“Se você encontrou este site, não feche a página. Ainda há registros para recuperar.”</p><div id="secret">[ dica: alguns arquivos só aparecem para quem procura... ]</div></div>
+</section>
+
+<section id="stories" class="hidden">
+ <div class="meta">DATABASE / STORIES</div><h2>▸ ARQUIVO DE HISTÓRIAS</h2>
+ <div class="grid">
+  <article class="card"><div class="meta">001 — DISPONÍVEL</div><h3>O Último Servidor</h3><p>03:17. O lobby está vazio, mas alguém acabou de entrar.</p><button class="btn" onclick="openStory('last')">ABRIR CAPÍTULO</button></article>
+  <article class="card"><div class="meta">002 — BLOQUEADO</div><h3>A Fita VHS</h3><p>Arquivo corrompido. Recuperação pendente.</p><button class="btn" onclick="locked()">TENTAR ACESSO</button></article>
+  <article class="card"><div class="meta">003 — BLOQUEADO</div><h3>O Retorno de Dusekkar</h3><p>O relatório menciona uma presença no corredor.</p><button class="btn" onclick="locked()">TENTAR ACESSO</button></article>
+ </div>
+ <div id="storyText" class="panel hidden"></div>
+</section>
+
+<section id="files" class="hidden">
+ <div class="meta">DATABASE / RECOVERED FILES</div><h2>▸ DOCUMENTOS CONFIDENCIAIS</h2>
+ <div class="grid">
+  <article class="card"><div class="meta">FILE_001.TXT</div><h3>Relatório do Lobby</h3><p>Status: recuperado parcialmente.</p><button class="btn" onclick="alert('RELATÓRIO 001\\nHorário: 03:17\\nConexão: desconhecida\\nObservação: não havia ninguém na lista de jogadores.')">LER ARQUIVO</button></article>
+  <article class="card"><div class="meta">TAPE_002.VHS</div><h3>Gravação sem título</h3><p>Status: fita não catalogada.</p><button class="btn" onclick="alert('ERRO 404: ARQUIVO NÃO ENCONTRADO.\\nA fita ainda não foi digitalizada.')">VER STATUS</button></article>
+  <article class="card"><div class="meta">USER_???</div><h3>Jogador desconhecido</h3><p>Status: identidade não confirmada.</p><button class="btn" onclick="alert('IDENTIDADE: [DADOS REMOVIDOS]\\nÚltima conexão: 03:17')">CONSULTAR</button></article>
+ </div>
+</section>
+
+<section id="about" class="hidden">
+ <div class="meta">ABOUT THIS PROJECT</div><h2>▸ SOBRE O FORSAKEN ARCHIVES</h2>
+ <div class="panel"><p>FORSAKEN ARCHIVES é um projeto de histórias de fã inspirado no universo de Forsaken, com capítulos fictícios, mistério, documentos e estética de sites antigos.</p><p>Este é um site independente, feito em HTML, CSS e JavaScript. Não é um site oficial do Roblox nem dos criadores de Forsaken.</p><p class="meta">BUILD 1.0 // LOCAL ARCHIVE</p></div>
+</section>
+</main>
+<footer>FORSAKEN ARCHIVES © 2008–2026 // FAN-MADE PROJECT<br>CONNECTION LOGGED. HAVE A SAFE SESSION.</footer>
+<script>
+function showSection(id){
+ document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));
+ document.getElementById(id).classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function openStory(which){
+ showSection('stories');
+ const box=document.getElementById('storyText');
+ box.classList.remove('hidden');
+ if(which==='last'){
+ box.innerHTML=`<div class="meta">REGISTRO 001 // CAPÍTULO 1 // 03:17 DA MADRUGADA</div>
+ <h2>O ÚLTIMO SERVIDOR</h2>
+ <div class="story">
+ <p>O servidor estava vazio. O relógio marcava 03:17. Os sobreviventes estavam reunidos no lobby, esperando a próxima partida.</p>
+ <p>Elliot organizava algumas caixas. Shedletsky observava sua espada. No canto da sala, 1x1x1x1 permanecia imóvel.</p>
+ <p><b>BZZZZT...</b> As luzes começaram a piscar. Uma mensagem apareceu na tela:</p>
+ <p class="warning">WARNING: UNKNOWN PLAYER CONNECTED</p>
+ <p class="dialogue"><b>Elliot:</b> — Gente... alguém entrou no servidor?</p>
+ <p class="dialogue"><b>Shedletsky:</b> — Não tem ninguém na lista.</p>
+ <p class="dialogue"><b>1x1x1x1:</b> — ...Ele voltou.</p>
+ <p>Um barulho de passos veio do corredor. TOC... TOC... TOC...</p>
+ <p>A porta se abriu lentamente. Uma figura apareceu na escuridão. Era Dusekkar. Seus olhos brilhavam em azul e ele segurava uma fita VHS antiga.</p>
+ <p class="dialogue"><b>Elliot:</b> — Dusekkar?! Onde você estava?</p>
+ <p>Na etiqueta da fita estava escrito:</p>
+ <p class="warning">NÃO ASSISTA ÀS 03:17.</p>
+ <p>A televisão ligou sozinha. Uma voz desconhecida começou a falar:</p>
+ <p class="dialogue"><b>???</b> — Finalmente... todos vocês estão reunidos.</p>
+ <p><b>FIM DO CAPÍTULO 1.</b></p>
+ <p class="meta">PRÓXIMO REGISTRO: A FITA VHS // STATUS: BLOQUEADO</p>
+ </div>`;
+ } else {locked();}
+ box.scrollIntoView({behavior:'smooth'});
+}
+function locked(){alert('ACESSO NEGADO\\nEste registro ainda não foi recuperado.');}
+let taps=0;
+document.querySelector('.brand').addEventListener('click',()=>{taps++;if(taps===5){document.getElementById('secret').textContent='[ARQUIVO OCULTO DESBLOQUEADO: ELES AINDA ESTÃO NO SERVIDOR.]';}});
+</script>
+</body>
+</html>html…]()
